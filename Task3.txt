@@ -1,0 +1,9 @@
+How is web3 used in componentDidMount? How does the user connect to the blockchain network? This is metamask!
+
+First componentDidMount gets a network provider and web3 instance. Then its access the users web3 account. Accesses an instance of the contract. And then by setting the state of the contracts methods. It will then call fetchLoot. 
+
+
+pick one function: fetchLoot, addLoot, or buyLoot and explain in detail what it is doing and how it works. Every line please!
+
+FetchLoot first gets the number of tokens by accessing the contracts totalSupply() method then it 
+Loops through all the tokens and access the contract by calling the tokenByIndex method, this will return a tokensId. Using the tokenId it calls the getToken method and calls the ownerOf token. Then by deciphers the token by accessing all attributes. If the owner of the token owns that token then it will be push that into the owned array. If the token is available then it will push that on to the available array. 
